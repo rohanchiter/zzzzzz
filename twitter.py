@@ -74,7 +74,7 @@ class Twitter:
         r = requests.get(media_url, auth = auth)
         with open(arr[9], 'wb') as f:
             f.write(r.content)
-        url = "https://twitter.com/message/"+id
+        url = "twitter.com/messages/media/"+id
         tweet = tweet.replace(url, "")
         print("Media downloaded successfully!")
         self.api.update_with_media(filename= arr[9], status = tweet)
