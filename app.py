@@ -19,11 +19,11 @@ def start():
 
                 if len(message) is not 0 and len(message) < 280:
                     if "isal" in message:
-                        message = message.replace("isal", "")
+                        message = message.replace("isal", "post masuk")
                         if len(message) is not 0:
                             if dms[i]['media'] is None:
                                 print("DM will be posted")
-                                tw.post_tweet("post masuk",message)
+                                tw.post_tweet(message)
                                 tw.delete_dm(id)
                             else:
                                 print("DM will be posted with media")
