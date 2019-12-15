@@ -19,7 +19,7 @@ def start():
 
                 if len(message) is not 0 and len(message) < 280:
                     if "apa" in message:
-                        message = message.replace("apa", "kasih nama nih menfess dong ! || #apa ")
+                        message = message.replace("apa", " #apawoy ")
                         if len(message) is not 0:
                             if dms[i]['media'] is None:
                                 print("DM will be posted")
