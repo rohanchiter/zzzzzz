@@ -1,10 +1,11 @@
 from twitter import Twitter
 import time
 
-#test pancing ke heroku supaya keluar dyno
-#test kedua pancing worker supaya muncul...ggg
+# test pancing ke heroku supaya keluar dyno
+# test kedua pancing worker supaya muncul...gggh
 
 tw = Twitter()
+
 
 def start():
     print("Starting program...")
@@ -26,16 +27,17 @@ def start():
                                 tw.delete_dm(id)
                             else:
                                 print("DM will be posted with media")
-                                tw.post_tweet_with_media(message, dms[i]['media'])
+                                tw.post_tweet_with_media(
+                                    message, dms[i]['media'])
                                 tw.delete_dm(id)
 
                         else:
                             print("DM deleted because its empty..")
                             tw.delete_dm(id)
 
-
                     else:
-                        print("DM will be deleted because does not contains keyword..")
+                        print(
+                            "DM will be deleted because does not contains keyword..")
                         tw.delete_dm(id)
 
             dms = list()
@@ -45,6 +47,7 @@ def start():
             dms = tw.read_dm()
             if len(dms) is 0:
                 time.sleep(60)
+
 
 if __name__ == "__main__":
     start()
