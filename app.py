@@ -28,7 +28,7 @@ def start():
                             else:
                                 print("DM will be posted with media")
                                 tw.post_tweet_with_media(
-                                    message, dms[i]['media'])
+                                    message, dms[i]['media'],id)
                                 tw.delete_dm(id)
 
                         else:
